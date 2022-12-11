@@ -1,6 +1,7 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <component :is="$route.meta.layout || 'div'"> </component>
+  </div>
 </template>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>
