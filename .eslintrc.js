@@ -13,5 +13,7 @@ module.exports = {
     "vue/multi-word-component-names": "off",
     "linebreak-style": 0,
     quotes: [0, "double"],
+    "vuejs-accessibility/click-events-have-key-events": "off",
+    "vuejs-accessibility/label-has-for": "off",
   },
 };
