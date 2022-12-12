@@ -17,9 +17,9 @@
   align-items: center;
 }
 .table-btn {
-  padding: 13px 12px;
+  padding: 8px 10px;
   background: #ffffff;
-  border: 2px solid #647a8c;
+  border: 1px solid #647a8c;
 }
 .table-btn-cards {
   border-radius: 10px 0 0 10px;

@@ -10,10 +10,10 @@
     <TableComponent
       v-for="card in cards"
       :key="card.id"
-      :userId="card.userId"
       :id="card.id"
-      :title="card.title"
-      :completed="card.completed"
+      :number="card.number"
+      :type="card.type"
+      :creationDate="card.creationDate"
     />
   </table>
 </template>
@@ -24,9 +24,6 @@ import TableComponent from "@/components/Tables/TableComponent.vue";
 export default {
   components: {
     TableComponent,
-  },
-  mounted() {
-    this.$store.dispatch("getData");
   },
   computed: {
     cards() {

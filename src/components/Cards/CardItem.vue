@@ -2,7 +2,7 @@
   <article>
     <div class="card-item__wrap">
       <div class="card-item__title">
-        <span>{{ userId }}</span>
+        <span>{{ id }}</span>
         <div class="btn-delete-stroke" @click="isModalVisible = !isModalVisible">
           <div class="bar"></div>
           <div class="bar"></div>
@@ -13,15 +13,15 @@
       <div class="card-item__info">
         <div class="card-item__info_item">
           <span>Номер накладной:</span>
-          <p>{{ id }}</p>
+          <p>{{ number }}</p>
         </div>
         <div class="card-item__info_item">
           <span>Тип заказа:</span>
-          <p>{{ title }}</p>
+          <p>{{ type }}</p>
         </div>
         <div class="card-item__info_item">
           <span>Дата создания:</span>
-          <p>{{ completed }}</p>
+          <p>{{ creationDate }}</p>
         </div>
       </div>
     </div>
@@ -41,10 +41,10 @@ export default {
     };
   },
   props: {
-    userId: Number,
-    id: Number,
-    title: String,
-    completed: String,
+    id: String,
+    number: String,
+    type: String,
+    creationDate: String,
   },
 };
 </script>
@@ -53,6 +53,7 @@ export default {
 .btn-delete-stroke {
   position: absolute;
   display: flex;
+  right: 20px;
   flex-direction: column;
   gap: 2px;
   cursor: pointer;
@@ -88,6 +89,9 @@ export default {
     background: rgba(237, 232, 245, 0.5);
     min-height: 40px;
     padding: 0 12px;
+    span {
+      @include font(Roboto, 400, 14px, 16px, #000);
+    }
   }
   &__info {
     display: flex;

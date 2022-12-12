@@ -1,12 +1,23 @@
 <template>
-  <div class="modal-delete-stroke">
+  <div class="modal-delete-stroke" @click="DELETE_CARD()">
     <div class="modal-delete-stroke__inner">
       <span>удалить</span>
     </div>
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  computed: {
+    cards() {
+      return this.$store.state.cards;
+    },
+    DELETE_CARD() {
+      return this.$store.dispatch("DELETE_CARD");
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .modal-delete-stroke {

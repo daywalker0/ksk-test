@@ -3,10 +3,10 @@
     <ul class="cardlist__wrap row">
       <li class="card-item" v-for="card in cards" :key="card.id">
         <CardItem
-          :userId="card.userId"
           :id="card.id"
-          :title="card.title"
-          :completed="card.completed"
+          :number="card.number"
+          :type="card.type"
+          :creationDate="card.creationDate"
         />
       </li>
     </ul>
@@ -19,9 +19,6 @@ import CardItem from "@/components/Cards/CardItem.vue";
 export default {
   components: {
     CardItem,
-  },
-  mounted() {
-    this.$store.dispatch("getData");
   },
   computed: {
     cards() {
